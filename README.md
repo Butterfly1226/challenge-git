@@ -16,3 +16,30 @@ How to attempt this challenge:
 4) Set your new repo as the origin: `git remote set-url origin ${your repo url}`
 5) Push your solution to your repo
 You must follow these steps for your solution to be accepted -- forks or other methods will not be considered.
+
+```
+# Clone your repo
+git clone https://github.com/Butterfly1226/challenge-git.git
+cd challenge-git
+
+# Create branches and commits (if needed, based on challenge)
+git checkout -b add-echo
+# Make changes
+git commit -am "feat: add echo route"
+
+git checkout master
+git checkout -b add-reverse
+# Make changes
+git commit -am "feat: add reverse route"
+
+# Rebase branches onto master
+git checkout master
+git rebase add-echo
+git rebase add-reverse
+
+# Set remote URL
+git remote set-url origin https://github.com/Butterfly1226/challenge-git.git
+
+# Push to your repo
+git push -u origin master
+```
